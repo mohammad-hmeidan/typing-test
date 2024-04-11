@@ -1,0 +1,180 @@
+:root{
+    --main-color:#2196f3;
+    --second-color:#009688;
+    --main-border-radius:6px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.game{
+    background-color: #eee;
+    min-height: 100vh;
+}
+.game .name{
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+.game .container{
+    margin: auto;
+    max-width: 900px;
+}
+.game .container .levels{
+    text-align: center;
+}
+.game .container .levels span{
+    display: block;
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.game .container .levels .content{
+    display: flex;
+    justify-content: center;
+}
+.game .container .levels .content div{
+    margin:10px 10px 0 0;
+    padding: 15px 20px;
+    cursor: pointer;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .3s;
+}
+.game .container .levels .content div.active{
+    background-color: var(--main-color);
+    color: white;
+}
+.game .container .message{
+    background-color: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: var(--main-border-radius);
+    text-align: center;
+}
+.game .container .message span{
+    font-weight: bold;
+    color: var(--second-color);
+}
+.game .container .message span::before{
+    content: "[ ";
+}
+.game .container .message span::after{
+    content: " ]";
+}
+.game .container .start{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--second-color);
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+}
+.game .container .the-word{
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    color: var(--main-color);
+    user-select: none;
+    text-transform: capitalize;
+}
+.game .container .input{
+    margin: 15px auto;
+    width: 50%;
+    display: block;
+    padding: 13px;
+    border: 2px solid var(--main-color);
+    border-radius: var(--main-border-radius);
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    caret-color: var(--main-color);
+}
+.game .container .input:focus{
+    outline: none;
+}
+.game .container .upcoming-words{
+    background-color: white;
+    margin: 15px 0;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.game .container .upcoming-words > div{
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    margin: 4px;
+    padding: 10px;
+    border-radius: var(--main-border-radius);
+}
+.game .container .control{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+}
+.game .container .control span{
+    font-weight: bold;
+    color: var(--second-color);
+}
+.game .container .finish{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    padding: 15px;
+}
+.game .container .finish .good{
+    color: var(--main-color);
+}
+.game .container .finish .button-good,
+.game .container .finish .button-bad{
+    display: block;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    display: none;
+}
+.game .container .finish .button-bad{
+    background-color: red;
+}
+.game .container .finish .bad{
+    color: red;
+}
+.game .container .number-level{
+    margin: 20px auto;
+    width: fit-content;
+    display: none;
+    align-items: center;
+}
+.game .container .number-level span:first-child{
+    margin-right: 5px;
+}
+.game .container .number-level ul{
+    display: flex;
+    list-style: none;
+}
+.game .container .number-level ul li{
+    padding: 5px 8px;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+.game .container .number-level ul li.active{
+    background-color: var(--main-color);
+    color: white;
+}
